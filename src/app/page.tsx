@@ -136,7 +136,7 @@ export default function LeaderboardPage() {
           />
         </div>
         <div className="nav-actions">
-          <button className="chip-btn" onClick={fetchLeaderboard} disabled={loading}>
+          <button className="max-md:hidden chip-btn" onClick={fetchLeaderboard} disabled={loading}>
             ↻ {loading ? "Loading…" : "Refresh"}
           </button>
           {session ? (
@@ -189,7 +189,7 @@ export default function LeaderboardPage() {
             <div className="sheet-inner">
               <HighlightCards users={users} firstBlood={firstBlood} />
 
-              <div className="board-head" style={{ marginTop: 28 }}>
+              <div className="max-sm:hidden board-head" style={{ marginTop: 28 }}>
                 <h2>All Coders · {registeredCount} registered</h2>
                 <div className="re">
                   {lastRefreshed ? `↻ Refreshed ${lastRefreshed.toLocaleTimeString()}` : ""} · every 30 min
